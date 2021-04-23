@@ -1,0 +1,11 @@
+/*
+*/
+
+#ifndef GROUP_PROJECT_FILEINPUT_H
+#define GROUP_PROJECT_FILEINPUT_H
+
+class FileInput{
+
+};
+
+#endif //GROUP_PROJECT_FILEINPUT_H

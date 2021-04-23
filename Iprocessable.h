@@ -1,0 +1,11 @@
+/*
+*/
+
+#ifndef GROUP_PROJECT_IPROCESSABLE_H
+#define GROUP_PROJECT_IPROCESSABLE_H
+
+class Iprocessable{
+
+};
+
+#endif //GROUP_PROJECT_IPROCESSABLE_H

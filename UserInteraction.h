@@ -1,0 +1,11 @@
+/*
+*/
+
+#ifndef GROUP_PROJECT_USERINTERACTION_H
+#define GROUP_PROJECT_USERINTERACTION_H
+
+class UserInteraction{
+
+};
+
+#endif //GROUP_PROJECT_USERINTERACTION_H

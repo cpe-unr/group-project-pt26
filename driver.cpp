@@ -1,4 +1,10 @@
 /** @file */
+/*
+CS 202 Final Project
+Kayleigh Dohm
+Drake Lemon
+Nicole Siron
+*/
 #include <iostream>
 
 /**
@@ -26,6 +32,6 @@ void fn(){
 }
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
     return 0;
 }
