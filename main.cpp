@@ -7,6 +7,8 @@ Nicole Siron
 */
 #include <iostream>
 
+#include "UserInteraction.h"
+
 /**
  * \brief   The function bar.
  *
