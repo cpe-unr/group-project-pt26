@@ -4,7 +4,9 @@
 #ifndef GROUP_PROJECT_STEREOWAV_H
 #define GROUP_PROJECT_STEREOWAV_H
 
-class StereoWav{
+#include "Wav.h"
+
+class StereoWav : public Wav {
 
 };
 

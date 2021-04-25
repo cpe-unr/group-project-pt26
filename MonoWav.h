@@ -4,7 +4,9 @@
 #ifndef GROUP_PROJECT_MONOWAV_H
 #define GROUP_PROJECT_MONOWAV_H
 
-class MonoWav{
+#include "Wav.h"
+
+class MonoWav : public Wav {
 
 };
 
