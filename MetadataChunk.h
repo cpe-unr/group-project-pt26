@@ -19,4 +19,4 @@ typedef struct metadata_chunk {
 	char* data = nullptr;
 } metadata_chunk;
 
-#endif 
+#endif //METADATA_CHUNK_H

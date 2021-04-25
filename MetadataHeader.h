@@ -19,4 +19,4 @@ typedef struct metadata_header {
 	char ID[4];
 } metadata_header;
 
-#endif 
+#endif //METADATA_HEADER_H
