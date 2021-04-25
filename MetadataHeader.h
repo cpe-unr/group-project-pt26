@@ -1,3 +1,4 @@
+/** @file */
 #ifndef METADATA_HEADER_H
 #define METADATA_HEADER_H
 

@@ -1,3 +1,4 @@
+/** @file */
 #ifndef METADATA_CHUNK_H
 #define METADATA_CHUNK_H
 
