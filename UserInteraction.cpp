@@ -48,8 +48,11 @@ void UserInteraction::userModify(){
 
 void UserInteraction::processorType(){
 	
-	std::cout << "Which processors would you like?"
+	std::cout << "Which processor would you like?"
 	std::cout << "1. Normalization\n 2. Noise Gating\n 3. Echo\n";
+	std::cout << "Enter Selection: ";
+	std::cin >> procSelection;
+	
 	
 }
 

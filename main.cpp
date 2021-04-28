@@ -34,9 +34,19 @@ const int NUM_ARGS = 2;
  * \retval        ERR_FAILURE    An error occurred
  */
 
+/**
+ * Main application entry point.
+ *
+ * @return
+ */
 int main(int argc, char const *argv[]) {
 	std::string folder = argv[1];
 	FileInput::readFiles(folder);
+
+	FileInput monoObj;//object that holds all the info for files
+	FileInput stereoObj;		
+
+	UserInteraction::userSelection ;
 	
     return 0;
 
