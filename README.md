@@ -1,11 +1,11 @@
 # CS 202 Semester Project Template
 
-###Group Members and Responsibilities
+### Group Members and Responsibilities
 |**Kayleigh Dohm**|**Drake Lemon**|**Nicole Siron**|
 |-----------------|---------------|----------------|
 
-###Description of Design
+### Description of Design
 
-####UML Diagrams
+#### UML Diagrams
 
-###Challenges Encountered
+### Challenges Encountered
