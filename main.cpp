@@ -6,8 +6,12 @@ Drake Lemon
 Nicole Siron
 */
 #include <iostream>
+#include <string>
 
+#include "FileInput.h"
 #include "UserInteraction.h"
+
+const int NUM_ARGS = 2;
 
 /**
  * \brief   The function bar.
@@ -29,11 +33,11 @@ Nicole Siron
  * \retval        ERR_SUCCESS    The function is successfully executed
  * \retval        ERR_FAILURE    An error occurred
  */
-void fn(){
 
-}
-
-int main() {
-
+int main(int argc, char const *argv[]) {
+	std::string folder = argv[1];
+	FileInput::readFiles(folder);
+	
     return 0;
+
 }
