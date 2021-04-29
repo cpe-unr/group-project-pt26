@@ -4,7 +4,8 @@
 #include "MetadataHeader.h"
 #include "FileOutput.h"
 
-void ModifyMetadata::modifyMetadata(Wav* wav, std::vector <std::string> metadataIDs, std::vector <std::string> metadata) {
+template <typename T>
+void ModifyMetadata::modifyMetadata(Wav<T>* wav, std::vector <std::string> metadataIDs, std::vector <std::string> metadata) {
 	metadata_header newMetadataHeader;
 	std::vector<metadata_chunk> newMetadata;
 	int newSize = 0;

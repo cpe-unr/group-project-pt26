@@ -7,8 +7,9 @@
 #include <vector>
 
 /**
- * A base class for wavs
+ * A template base class for wavs
  */
+template <typename T>
 class Wav{
 protected:
 	/**
@@ -23,7 +24,7 @@ public:
 	/**
  	 * A getter for the metadata
 	 */
-	std::vector<metadata_chunk> getMetadata();
+	std::vector<metadata_chunk> getMetadata() const;
 	/**
  	 * A setter for the metadata header
  	 * @param newHeader - the new metadata header to set the metadata header to

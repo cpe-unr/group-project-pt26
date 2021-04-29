@@ -1,12 +1,17 @@
 /** @file */
 #include "Wav.h"
 
-	std::vector<metadata_chunk> Wav::getMetadata(){
+	template <typename T>
+	std::vector<metadata_chunk> Wav<T>::getMetadata() const {
 		return metadata;
 	}
-	void Wav::setMetadataHeader(metadata_header newHeader){
+
+	template <typename T>
+	void Wav<T>::setMetadataHeader(metadata_header newHeader){
 		metadataHeader = newHeader;
 	}
-	void Wav::setMetadata(std::vector<metadata_chunk> newMetadata){
+
+	template <typename T>
+	void Wav<T>::setMetadata(std::vector<metadata_chunk> newMetadata){
 		metadata = newMetadata;
 	}
