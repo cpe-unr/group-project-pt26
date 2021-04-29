@@ -21,8 +21,8 @@ unsigned char* NoiseGate::processBuffer(unsigned char* buffer, int size){
 
 short* NoiseGate::processBuffer(short* buffer, int size){
 	float zero = 0;
-	float upperBound = zero + 16383.5 * thresholdPercent;
-	float lowerBound = zero - 16383.5 * thresholdPercent;
+	float upperBound = zero + 32767 * thresholdPercent;
+	float lowerBound = zero - 32767 * thresholdPercent;
 	short* newBuffer = new short[size/2];
 	for (int i = 0; i < size/2; i++) {
 		if (buffer[i] < upperBound && buffer[i] > lowerBound) {
