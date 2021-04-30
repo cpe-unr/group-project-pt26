@@ -12,7 +12,7 @@ const float echoLevel = 0.5f;
 /**
  * A const float giving the factor to scale audio by
  */
-const float scaleFactor = 0.75f;
+const float scaleFactor = 0.5f;
 
 /**
  * A class for applying an echo
