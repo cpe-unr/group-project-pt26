@@ -41,6 +41,13 @@ const int NUM_ARGS = 2;
  */
 int main(int argc, char const *argv[]) {
 	std::string folder = argv[1];
+
+	if (argc != 2) {
+  		std::cout << "Correct usage:" << std::endl;
+  		std::cout << "./text_analyzer " << std::endl; //does the user need to enter a folder name or the path to the folder
+  		return 0;
+	}
+
 	FileInput::readFiles(folder);
 
 	FileInput monoObj;//object that holds all the info for files

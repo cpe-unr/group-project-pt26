@@ -8,6 +8,7 @@
 #include <fstream>
 #include <dirent.h>
 #include <sys/stat.h>
+#include "WaveHeader.h"
 
 /**
  * Class that looks in the given directory and takes out the file information

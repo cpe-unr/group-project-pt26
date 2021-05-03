@@ -4,7 +4,7 @@ audio: main.o FileInput.o UserInteraction.o ModifyMetadata.o Wav.o StereoWav.o M
 main.o: main.cpp FileInput.h UserInteraction.h
 	g++ -c -std=c++11 main.cpp 
 
-FileInput.o: FileInput.cpp FileInput.h
+FileInput.o: FileInput.cpp FileInput.h WaveHeader.h
 	g++ -c -std=c++11 FileInput.cpp
 
 UserInteraction.o: UserInteraction.cpp UserInteraction.h

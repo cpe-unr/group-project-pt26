@@ -23,10 +23,21 @@ void FileInput::readFiles(const std::string& folder){
 		std::ifstream fin(filename, std::ios::binary | std::ios::in);
 		if(fin.is_open()){
 			//extract technical info including metadata and put into object
-			//if filename contains "mono" add to monoObj
-			//if filename contains "stereo" add to stereoObj
-			//delete sound file data from heap
+			//doesn't inclue metadata as of now
+			file.read((char*)&waveHeader, sizeof(wav_header));
 
+			//if filename contains "mono" add to monoObj
+			if(waveHeader.num_channels == 1){
+				monoObj = new unsigned char[waveHeader.data_bytes];
+        		file.read((char*)buffer, waveHeader.data_bytes);
+			}
+
+			//if filename contains "stereo" add to stereoObj
+			if(waveHeader.num_channels == 2){
+				stereoObj = new unsigned char[waveHeader.data_bytes];
+        		file.read((char*)buffer, waveHeader.data_bytes);
+			}
+			//delete sound file data from heap
 			fin.close();	
 		}
 	}	
