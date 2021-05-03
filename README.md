@@ -4,9 +4,8 @@
 |**Kayleigh Dohm**|**Drake Lemon**|**Nicole Siron**|
 |-----------------|---------------|----------------|
 |User Interaction |Modify Metadata|   File Input   |
-|-----------------|---------------|----------------|
 |   File Output   |   Processors  |                |
-|-----------------|---------------|----------------|
+
 ### Description of Design
 
 #### UML Diagrams
