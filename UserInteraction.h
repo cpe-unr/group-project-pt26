@@ -3,8 +3,6 @@
 #ifndef USERINTERACTION_H
 #define USERINTERACTION_H
 
-
-
 #include <iostream>
 #include <string>
 /**
@@ -21,6 +19,10 @@ public:
 	 *
 	 */
 	UserInteraction();
+
+	/**
+	 * A method that allows the user to choose what they want to do with their audio files
+	 */
 
 	void userSelection();
 

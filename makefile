@@ -7,7 +7,7 @@ main.o: main.cpp FileInput.h UserInteraction.h
 FileInput.o: FileInput.cpp FileInput.h WaveHeader.h
 	g++ -c -std=c++11 FileInput.cpp
 
-UserInteraction.o: UserInteraction.cpp UserInteraction.h
+UserInteraction.o: UserInteraction.cpp UserInteraction.h FileOutput.h
 	g++ -c -std=c++11 UserInteraction.cpp
 
 ModifyMetadata.o: ModifyMetadata.cpp ModifyMetadata.h MetadataChunk.h MetadataHeader.h Wav.h FileOutput.h
@@ -31,7 +31,7 @@ Echo.o: Echo.cpp Echo.h Iprocessable.h
 Normal.o: Normal.cpp Normal.h Iprocessable.h
 	g++ -c -std=c++11 Normal.cpp
 
-FileOutput.o: FileOutput.cpp FileOutput.h 
+FileOutput.o: FileOutput.cpp FileOutput.h ModifyMetadata.h Metadata_chunk.h
 	g++ -c -std=c++11 FileOutput.cpp
 
 clean:
