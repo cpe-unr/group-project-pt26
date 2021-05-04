@@ -49,11 +49,7 @@ int main(int argc, char const *argv[]) {
 	}
 
 	FileInput::readFiles(folder);
-
-	FileInput monoObj;//object that holds all the info for files
-	FileInput stereoObj;		
-
-	UserInteraction::userSelection ;
+	UserInteraction::userSelection;
 	
     return 0;
 

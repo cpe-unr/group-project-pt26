@@ -5,8 +5,11 @@ UserInteraction Implementation
 */
 
 #include "UserInteraction.h"
+#include "FileOutput.h"
 
-UserInteraction::UserInteraction(){}
+UserInteraction::UserInteraction(){
+	selection = 0
+}
 
 void UserInteraction::userSelection(){
 	std::cout << "Files have been read and processed..." << std::endl;
@@ -43,16 +46,14 @@ void UserInteraction::userModify(){
 	
 		std::cout << "Please provide the name of the file you wish to modify." << std::endl;
 		std::cin >> filename;
-		//call modifyMetadata method??	
+		filename.modifyMetadata(); //??
 }
 
 void UserInteraction::processorType(){
 	
-	std::cout << "Which processor would you like?"
-	std::cout << "1. Normalization\n 2. Noise Gating\n 3. Echo\n";
-	std::cout << "Enter Selection: ";
-	std::cin >> procSelection;
-	
+	std::cout << "Please provide the name of the file you wish to process." <<std::endl;
+	std::cin >> filename;
+	FileOutput::newFile(filename);
 	
 }
 

@@ -2,7 +2,6 @@
 #include "ModifyMetadata.h"
 #include "MetadataChunk.h"
 #include "MetadataHeader.h"
-#include "FileOutput.h"
 
 template <typename T>
 void ModifyMetadata::modifyMetadata(Wav<T>* wav, std::vector <std::string> metadataIDs, std::vector <std::string> metadata) {
@@ -51,5 +50,5 @@ void ModifyMetadata::modifyMetadata(Wav<T>* wav, std::vector <std::string> metad
 	wav->setMetadataHeader(newMetadataHeader);
 	wav->setMetadata(newMetadata);
 	//write new metadata to file
-	FileOutput::createNewMetadataFile(newMetadata);
+	/*FileOutput::createNewMetadataFile(newMetadata);*/
 }
