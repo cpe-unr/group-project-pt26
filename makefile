@@ -1,5 +1,5 @@
-audio: main.o FileInput.o UserInteraction.o ModifyMetadata.o Wav.o StereoWav.o MonoWav.o NoiseGate.o Echo.o Normal.o FileOutput.o
-	g++ -o -std=c++11 main.o FileInput.o UserInteraction.o ModifyMetadata.o Wav.o StereoWav.o MonoWav.o NoiseGate.o Echo.o Normal.o FileOutput.o
+audio: main.o FileInput.o UserInteraction.o ModifyMetadata.o Wav.o StereoWav.o MonoWav.o WavProcessing.a FileOutput.o
+	g++ -o -std=c++11 main.o FileInput.o UserInteraction.o ModifyMetadata.o Wav.o StereoWav.o MonoWav.o WavProcessing.a FileOutput.o
 
 main.o: main.cpp FileInput.h UserInteraction.h
 	g++ -c -std=c++11 main.cpp 
@@ -30,6 +30,9 @@ Echo.o: Echo.cpp Echo.h Iprocessable.h
 
 Normal.o: Normal.cpp Normal.h Iprocessable.h
 	g++ -c -std=c++11 Normal.cpp
+
+WavProcessing.a: Echo.o NoiseGate.o Normal.o
+	ar suvr WavProcessing.a Echo.o Noisegate.o Normal.o
 
 FileOutput.o: FileOutput.cpp FileOutput.h ModifyMetadata.h Metadata_chunk.h
 	g++ -c -std=c++11 FileOutput.cpp
