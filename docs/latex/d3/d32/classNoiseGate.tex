@@ -1,0 +1,103 @@
+\hypertarget{classNoiseGate}{}\section{Noise\+Gate Class Reference}
+\label{classNoiseGate}\index{Noise\+Gate@{Noise\+Gate}}
+
+
+{\ttfamily \#include $<$Noise\+Gate.\+h$>$}
+
+
+
+Inheritance diagram for Noise\+Gate\+:
+% FIG 0
+
+
+Collaboration diagram for Noise\+Gate\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNoiseGate_a2c9af941b7e82052f5c18d4f59267f65}{Noise\+Gate} (float \hyperlink{classNoiseGate_a625000d0a0548d52795a3df0f165f275}{threshold\+Percent})
+\item 
+unsigned char $\ast$ \hyperlink{classNoiseGate_a820117e917acd9cdc55e5f4ee46b9231}{process\+Buffer} (unsigned char $\ast$buffer, int size) override
+\item 
+short $\ast$ \hyperlink{classNoiseGate_a05c33d8853ee2764af12cce10ae0e59d}{process\+Buffer} (short $\ast$buffer, int size) override
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classNoiseGate_a625000d0a0548d52795a3df0f165f275}{threshold\+Percent}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class for applying a noise gate 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNoiseGate_a2c9af941b7e82052f5c18d4f59267f65}\label{classNoiseGate_a2c9af941b7e82052f5c18d4f59267f65}} 
+\index{Noise\+Gate@{Noise\+Gate}!Noise\+Gate@{Noise\+Gate}}
+\index{Noise\+Gate@{Noise\+Gate}!Noise\+Gate@{Noise\+Gate}}
+\subsubsection{\texorpdfstring{Noise\+Gate()}{NoiseGate()}}
+{\footnotesize\ttfamily Noise\+Gate\+::\+Noise\+Gate (\begin{DoxyParamCaption}\item[{float}]{threshold\+Percent }\end{DoxyParamCaption})}
+
+A parameterized constructor setting threshold\+Percent 
+\begin{DoxyParams}{Parameters}
+{\em threshold\+Percent} & -\/ The value to set threshold\+Percent to \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNoiseGate_a820117e917acd9cdc55e5f4ee46b9231}\label{classNoiseGate_a820117e917acd9cdc55e5f4ee46b9231}} 
+\index{Noise\+Gate@{Noise\+Gate}!process\+Buffer@{process\+Buffer}}
+\index{process\+Buffer@{process\+Buffer}!Noise\+Gate@{Noise\+Gate}}
+\subsubsection{\texorpdfstring{process\+Buffer()}{processBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned char $\ast$ Noise\+Gate\+::process\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Method that can be inherited to \hyperlink{classEcho}{Echo}, Normalization, and \hyperlink{classNoiseGate}{Noise\+Gate}. Allows each class to process the given \hyperlink{classWav}{Wav} File. Overload for 8 bit files. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ an array of unsigned chars constituting the audio data \\
+\hline
+{\em size} & -\/ an integer size of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ a processed array of unsigned chars 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classIprocessable_a6f0ff631112fba8eb55d9760b41987ea}{Iprocessable}.
+
+\mbox{\Hypertarget{classNoiseGate_a05c33d8853ee2764af12cce10ae0e59d}\label{classNoiseGate_a05c33d8853ee2764af12cce10ae0e59d}} 
+\index{Noise\+Gate@{Noise\+Gate}!process\+Buffer@{process\+Buffer}}
+\index{process\+Buffer@{process\+Buffer}!Noise\+Gate@{Noise\+Gate}}
+\subsubsection{\texorpdfstring{process\+Buffer()}{processBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily short $\ast$ Noise\+Gate\+::process\+Buffer (\begin{DoxyParamCaption}\item[{short $\ast$}]{buffer,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Method that can be inherited to \hyperlink{classEcho}{Echo}, Normalization, and \hyperlink{classNoiseGate}{Noise\+Gate}. Allows each class to process the given \hyperlink{classWav}{Wav} File. Overload for 8 bit files. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ an array of shorts constituting the audio data \\
+\hline
+{\em size} & -\/ an integer size of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ a processed array of shorts 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classIprocessable_a3a379ff1aab98b507892319afbd7eef0}{Iprocessable}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classNoiseGate_a625000d0a0548d52795a3df0f165f275}\label{classNoiseGate_a625000d0a0548d52795a3df0f165f275}} 
+\index{Noise\+Gate@{Noise\+Gate}!threshold\+Percent@{threshold\+Percent}}
+\index{threshold\+Percent@{threshold\+Percent}!Noise\+Gate@{Noise\+Gate}}
+\subsubsection{\texorpdfstring{threshold\+Percent}{thresholdPercent}}
+{\footnotesize\ttfamily float Noise\+Gate\+::threshold\+Percent\hspace{0.3cm}{\ttfamily [private]}}
+
+A float storing the percentage of the max distance from zero which is the threshold for noise gating 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{NoiseGate_8h}{Noise\+Gate.\+h}\item 
+\hyperlink{NoiseGate_8cpp}{Noise\+Gate.\+cpp}\end{DoxyCompactItemize}

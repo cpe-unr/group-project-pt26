@@ -28,8 +28,7 @@ public:
  	 * @param metadataIDs - a vector of strings each of which is an ID for a metadata entry
  	 * @param metadata - a vector of strings each of which is the data for a metadata entry corresponding to an ID in metadataIDs
  	 */
-	template <typename T>
-	void modifyMetadata(Wav<T>* wav, std::vector <std::string> metadataIDs, std::vector <std::string> metadata);
+	void modifyMetadata(Wav* wav, std::vector <std::string> metadataIDs, std::vector <std::string> metadata);
 };
 
 #endif //MODIFY_METADATA_H

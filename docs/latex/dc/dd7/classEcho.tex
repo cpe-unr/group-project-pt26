@@ -1,0 +1,103 @@
+\hypertarget{classEcho}{}\section{Echo Class Reference}
+\label{classEcho}\index{Echo@{Echo}}
+
+
+{\ttfamily \#include $<$Echo.\+h$>$}
+
+
+
+Inheritance diagram for Echo\+:
+% FIG 0
+
+
+Collaboration diagram for Echo\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEcho_a9531515ffab8be1e38cbdc0e0e9338a6}{Echo} (int \hyperlink{classEcho_abf5c35aa942bfae1832de23bb261e444}{delay})
+\item 
+unsigned char $\ast$ \hyperlink{classEcho_ad4e1835e48ebf660a529c68beb28e9d0}{process\+Buffer} (unsigned char $\ast$buffer, int size) override
+\item 
+short $\ast$ \hyperlink{classEcho_aea3e5f4352454ad3182695044ebefacf}{process\+Buffer} (short $\ast$buffer, int size) override
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classEcho_abf5c35aa942bfae1832de23bb261e444}{delay}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class for applying an echo 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEcho_a9531515ffab8be1e38cbdc0e0e9338a6}\label{classEcho_a9531515ffab8be1e38cbdc0e0e9338a6}} 
+\index{Echo@{Echo}!Echo@{Echo}}
+\index{Echo@{Echo}!Echo@{Echo}}
+\subsubsection{\texorpdfstring{Echo()}{Echo()}}
+{\footnotesize\ttfamily Echo\+::\+Echo (\begin{DoxyParamCaption}\item[{int}]{delay }\end{DoxyParamCaption})}
+
+A parameterized constructor setting delay 
+\begin{DoxyParams}{Parameters}
+{\em delay} & -\/ The value to set delay to \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEcho_ad4e1835e48ebf660a529c68beb28e9d0}\label{classEcho_ad4e1835e48ebf660a529c68beb28e9d0}} 
+\index{Echo@{Echo}!process\+Buffer@{process\+Buffer}}
+\index{process\+Buffer@{process\+Buffer}!Echo@{Echo}}
+\subsubsection{\texorpdfstring{process\+Buffer()}{processBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned char $\ast$ Echo\+::process\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Method that can be inherited to \hyperlink{classEcho}{Echo}, Normalization, and \hyperlink{classNoiseGate}{Noise\+Gate}. Allows each class to process the given \hyperlink{classWav}{Wav} File. Overload for 8 bit files. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ an array of unsigned chars constituting the audio data \\
+\hline
+{\em size} & -\/ an integer size of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ a processed array of unsigned chars 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classIprocessable_a6f0ff631112fba8eb55d9760b41987ea}{Iprocessable}.
+
+\mbox{\Hypertarget{classEcho_aea3e5f4352454ad3182695044ebefacf}\label{classEcho_aea3e5f4352454ad3182695044ebefacf}} 
+\index{Echo@{Echo}!process\+Buffer@{process\+Buffer}}
+\index{process\+Buffer@{process\+Buffer}!Echo@{Echo}}
+\subsubsection{\texorpdfstring{process\+Buffer()}{processBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily short $\ast$ Echo\+::process\+Buffer (\begin{DoxyParamCaption}\item[{short $\ast$}]{buffer,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Method that can be inherited to \hyperlink{classEcho}{Echo}, Normalization, and \hyperlink{classNoiseGate}{Noise\+Gate}. Allows each class to process the given \hyperlink{classWav}{Wav} File. Overload for 8 bit files. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ an array of unsigned chars constituting the audio data \\
+\hline
+{\em size} & -\/ an integer size of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ a processed array of unsigned chars 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classIprocessable_a3a379ff1aab98b507892319afbd7eef0}{Iprocessable}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classEcho_abf5c35aa942bfae1832de23bb261e444}\label{classEcho_abf5c35aa942bfae1832de23bb261e444}} 
+\index{Echo@{Echo}!delay@{delay}}
+\index{delay@{delay}!Echo@{Echo}}
+\subsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily int Echo\+::delay\hspace{0.3cm}{\ttfamily [private]}}
+
+An int storing the delay in bytes for the echo 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Echo_8h}{Echo.\+h}\item 
+\hyperlink{Echo_8cpp}{Echo.\+cpp}\end{DoxyCompactItemize}

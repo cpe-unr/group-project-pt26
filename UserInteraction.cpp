@@ -9,10 +9,17 @@ UserInteraction Implementation
 #include "ModifyMetadata.h"
 
 UserInteraction::UserInteraction(){
-	selection = 0
+	selection = 0;
+}
+
+UserInteraction::UserInteraction(std::vector<Wav*> newWavs, std::string newFolder){
+	selection = 0;
+	wavs = newWavs;
+	folder = newFolder;
 }
 
 void UserInteraction::userSelection(){
+
 	std::cout << "Files have been read and processed..." << std::endl;
 
 	do{
@@ -27,15 +34,15 @@ void UserInteraction::userSelection(){
 
 	switch(selection){
 	case 1:
-		UserInteraction::userModify;
+		userModify();
 		break;
 
 	case 2:
-		UserInteraction::processorType;
+		processorType();
 		break;
 
 	case 3:
-		FileOutput::exportCSV;
+		//exportCSV();
 		break;
 
 	}
@@ -44,33 +51,56 @@ void UserInteraction::userSelection(){
 }
 
 void UserInteraction::userModify(){
-	
-		std::cout << "Please provide the name of the file you wish to modify." << std::endl;
-		std::cin >> filename;
-		filename.modifyMetadata(); //??
+		ModifyMetadata modifyMetadata;
+		FileOutput fileOut;
+		int file;
+		std::string input;
+		int choice;
+		std::vector <std::string> IDs;
+		std::vector <std::string> metadata;
+		std::cout << "Please choose the number of the file you wish to modify." << std::endl;
+		int count = 0;
+		for(Wav* w : wavs){
+			std::cout << count << ". " << w->getFilename() << std::endl;
+			count++;
+		}
+		std::cin >> file;
+		std::cout << "Please choose type of metadata to add." << std::endl;
+		std::cout << "1. Artist" << std::endl;
+		std::cin >> choice;
+		std::string id;
+		switch(choice){
+		case 1:
+			IDs.push_back("IART");
+			break;
+		}
+		std::cout << "Please enter the metadata to add." << std::endl;
+		std::cin >> input;
+		metadata.push_back(input);
+		modifyMetadata.modifyMetadata(wavs[file], IDs, metadata);
+		fileOut.writeFile(folder, wavs[file]->getFilename(), wavs[file]);
 }
 
 void UserInteraction::processorType(){
 	
 	std::cout << "Please provide the name of the file you wish to process." <<std::endl;
-	std::cin >> filename;
-	std::string newFilename = saveFileName(filename);
-	FileOutput::newFile(newFilename);
+	//std::cin >> filename;
+	//std::string newFilename = saveFileName(filename);
+	//FileOutput::newFile(newFilename);
 	
 }
 
 std::string UserInteraction::saveFileName(std::string filename){
 	std::string file;
 	do{
-		std::cout << "Please provide the new name of this file." << std::endl
+		std::cout << "Please provide the new name of this file." << std::endl;
 		std::cin >> file;
 		if (file != filename){
 			return file;
 		}
 		else{
-		cout << "Invalid. New file name must be different from that of the current file." << std::endl;
+		std::cout << "Invalid. New file name must be different from that of the current file." << std::endl;
 		}	
-	}	
-	while (file = filename);
+	}while (file == filename);
 }
 

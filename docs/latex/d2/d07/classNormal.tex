@@ -1,0 +1,73 @@
+\hypertarget{classNormal}{}\section{Normal Class Reference}
+\label{classNormal}\index{Normal@{Normal}}
+
+
+{\ttfamily \#include $<$Normal.\+h$>$}
+
+
+
+Inheritance diagram for Normal\+:
+% FIG 0
+
+
+Collaboration diagram for Normal\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char $\ast$ \hyperlink{classNormal_a3cb50295766e591b7a108cd6e0fc71ba}{process\+Buffer} (unsigned char $\ast$buffer, int size) override
+\item 
+short $\ast$ \hyperlink{classNormal_a243a816f6a995ca5145a160b3b3d8b8f}{process\+Buffer} (short $\ast$buffer, int size) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class for applying a normalization 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNormal_a3cb50295766e591b7a108cd6e0fc71ba}\label{classNormal_a3cb50295766e591b7a108cd6e0fc71ba}} 
+\index{Normal@{Normal}!process\+Buffer@{process\+Buffer}}
+\index{process\+Buffer@{process\+Buffer}!Normal@{Normal}}
+\subsubsection{\texorpdfstring{process\+Buffer()}{processBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned char $\ast$ Normal\+::process\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Method that can be inherited to \hyperlink{classEcho}{Echo}, Normalization, and \hyperlink{classNoiseGate}{Noise\+Gate}. Allows each class to process the given \hyperlink{classWav}{Wav} File. Overload for 8 bit files. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ an array of unsigned chars constituting the audio data \\
+\hline
+{\em size} & -\/ an integer size of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ a processed array of unsigned chars 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classIprocessable_a6f0ff631112fba8eb55d9760b41987ea}{Iprocessable}.
+
+\mbox{\Hypertarget{classNormal_a243a816f6a995ca5145a160b3b3d8b8f}\label{classNormal_a243a816f6a995ca5145a160b3b3d8b8f}} 
+\index{Normal@{Normal}!process\+Buffer@{process\+Buffer}}
+\index{process\+Buffer@{process\+Buffer}!Normal@{Normal}}
+\subsubsection{\texorpdfstring{process\+Buffer()}{processBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily short $\ast$ Normal\+::process\+Buffer (\begin{DoxyParamCaption}\item[{short $\ast$}]{buffer,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Method that can be inherited to \hyperlink{classEcho}{Echo}, Normalization, and \hyperlink{classNoiseGate}{Noise\+Gate}. Allows each class to process the given \hyperlink{classWav}{Wav} File. Overload for 8 bit files. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ an array of unsigned chars constituting the audio data \\
+\hline
+{\em size} & -\/ an integer size of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ a processed array of unsigned chars 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classIprocessable_a3a379ff1aab98b507892319afbd7eef0}{Iprocessable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Normal_8h}{Normal.\+h}\item 
+\hyperlink{Normal_8cpp}{Normal.\+cpp}\end{DoxyCompactItemize}

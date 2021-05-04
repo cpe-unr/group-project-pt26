@@ -7,8 +7,11 @@ Nicole Siron
 */
 #include <iostream>
 #include <string>
+#include <vector>
 
+#include "Wav.h"
 #include "FileInput.h"
+#include "FileOutput.h"
 #include "UserInteraction.h"
 
 const int NUM_ARGS = 2;
@@ -40,16 +43,18 @@ const int NUM_ARGS = 2;
  * @return
  */
 int main(int argc, char const *argv[]) {
-	std::string folder = argv[1];
-
-	if (argc != 2) {
+	if (argc != NUM_ARGS) {
   		std::cout << "Correct usage:" << std::endl;
-  		std::cout << "./text_analyzer " << std::endl; //does the user need to enter a folder name or the path to the folder
+  		std::cout << "./audio folder_name" << std::endl; //does the user need to enter a folder name or the path to the folder
   		return 0;
 	}
 
-	FileInput::readFiles(folder);
-	UserInteraction::userSelection;
+	std::vector<Wav*> wavs;
+	std::string folder = argv[1];
+	FileInput fileInput;
+	wavs = fileInput.readFiles(folder);
+	UserInteraction userInteraction(wavs, folder);
+	userInteraction.userSelection();
 	
     return 0;
 

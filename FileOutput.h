@@ -4,7 +4,11 @@
 #define FILEOUTPUT_H
 
 #include "ModifyMetadata.h"
-#include "Metadata_chunk.h"
+#include "MetadataChunk.h"
+#include "WaveHeader.h"
+#include "Wav.h"
+#include "MonoWav.h"
+#include "StereoWav.h"
 
 #include <iostream>
 #include <fstream>
@@ -21,8 +25,8 @@ public:
 	 * A method to create a new file from the processed audio.
 	 * @param filename - takes filename so as to overwrite file with new name
 	 */
-	void newFile(std::string filename);
-
+	//void newFile(std::string filename);
+	void writeFile(std::string folder, std::string filename, Wav* wav);
 	/**
 	 * A method that takes all technical information and metadata of files and exports them into a CSV file
 	 * @param filename - the file name to be put into the CSV
@@ -30,13 +34,13 @@ public:
 	 * @param stereoObj - the object holding all technical info for the stereo wav file
 	 * @param monnObj - the object holding all technical info for the mono wav file
 	 */
-	void exportCSV(std::string filename, std::vector<metadata_chunk> metadata, FileInput stereoObj, FileInput monoObj);
+	//void exportCSV(std::string filename, std::vector<metadata_chunk> metadata, FileInput stereoObj, FileInput monoObj);
 
 	/**
 	 * A method that saves the file with new metadata added. Overrides existing metadata.
 	 * @param metadata - metadata that will be put into the new metadata file
 	 */
-	void createNewMetadataFile(std::vector<metadata_chunk> metadata);
+	//void createNewMetadataFile(std::vector<metadata_chunk> metadata);
 };
 
 #endif //FILEOUTPUT_H

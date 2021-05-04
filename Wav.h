@@ -4,14 +4,18 @@
 
 #include "MetadataChunk.h"
 #include "MetadataHeader.h"
+#include "WaveHeader.h"
 #include <vector>
+#include <string>
 
 /**
- * A template base class for wavs
+ * A base class for wavs
  */
-template <typename T>
 class Wav{
 protected:
+	std::string filename;
+
+	wav_header waveHeader;
 	/**
  	 * The metadata header info
  	 */
@@ -21,6 +25,15 @@ protected:
 	 */
 	std::vector<metadata_chunk> metadata;
 public:
+	Wav() = default;
+
+	Wav(std::string filename, wav_header waveHeader, metadata_header metadataHeader, std::vector<metadata_chunk> metadata);
+
+	wav_header getWaveHeader() const;
+
+	std::string getFilename() const;
+
+	metadata_header getMetadataHeader() const;
 	/**
  	 * A getter for the metadata
 	 */

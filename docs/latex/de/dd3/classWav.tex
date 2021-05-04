@@ -1,0 +1,103 @@
+\hypertarget{classWav}{}\section{Wav Class Reference}
+\label{classWav}\index{Wav@{Wav}}
+
+
+{\ttfamily \#include $<$Wav.\+h$>$}
+
+
+
+Inheritance diagram for Wav\+:
+% FIG 0
+
+
+Collaboration diagram for Wav\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWav_a1a3e774ef3b1f3b55b3cc3404735957b}\label{classWav_a1a3e774ef3b1f3b55b3cc3404735957b}} 
+{\bfseries Wav} (std\+::string filename, \hyperlink{structwav__header}{wav\+\_\+header} wave\+Header, \hyperlink{structmetadata__header}{metadata\+\_\+header} \hyperlink{classWav_a4ddb72dc81101f50ef1f6c4d0e8dc257}{metadata\+Header}, std\+::vector$<$ \hyperlink{structmetadata__chunk}{metadata\+\_\+chunk} $>$ \hyperlink{classWav_a69b39a8dd2ddd962b6acb966e0f454ee}{metadata})
+\item 
+\mbox{\Hypertarget{classWav_addc6dbce8755fd6fecc5ea1f5033cde4}\label{classWav_addc6dbce8755fd6fecc5ea1f5033cde4}} 
+\hyperlink{structwav__header}{wav\+\_\+header} {\bfseries get\+Wave\+Header} () const
+\item 
+\mbox{\Hypertarget{classWav_a7382a5afd932fba8310063b37e086f38}\label{classWav_a7382a5afd932fba8310063b37e086f38}} 
+std\+::string {\bfseries get\+Filename} () const
+\item 
+\mbox{\Hypertarget{classWav_acc6b7db86641ce99cf953c6f898ba348}\label{classWav_acc6b7db86641ce99cf953c6f898ba348}} 
+\hyperlink{structmetadata__header}{metadata\+\_\+header} {\bfseries get\+Metadata\+Header} () const
+\item 
+std\+::vector$<$ \hyperlink{structmetadata__chunk}{metadata\+\_\+chunk} $>$ \hyperlink{classWav_ac89cb1f2f327fab3a32d3ba3cd1261f8}{get\+Metadata} () const
+\item 
+void \hyperlink{classWav_a22586ef9396d094658ffc51e0d2108d5}{set\+Metadata\+Header} (\hyperlink{structmetadata__header}{metadata\+\_\+header} new\+Header)
+\item 
+void \hyperlink{classWav_a597dc2c221a3cdb5da499b91f6e907a6}{set\+Metadata} (std\+::vector$<$ \hyperlink{structmetadata__chunk}{metadata\+\_\+chunk} $>$ new\+Metadata)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWav_a2ca9cee3e37e3292bd04f3e7c1c9b24b}\label{classWav_a2ca9cee3e37e3292bd04f3e7c1c9b24b}} 
+std\+::string {\bfseries filename}
+\item 
+\mbox{\Hypertarget{classWav_ab9465cd3b99f1337fa3a77a639dcd9f3}\label{classWav_ab9465cd3b99f1337fa3a77a639dcd9f3}} 
+\hyperlink{structwav__header}{wav\+\_\+header} {\bfseries wave\+Header}
+\item 
+\hyperlink{structmetadata__header}{metadata\+\_\+header} \hyperlink{classWav_a4ddb72dc81101f50ef1f6c4d0e8dc257}{metadata\+Header}
+\item 
+std\+::vector$<$ \hyperlink{structmetadata__chunk}{metadata\+\_\+chunk} $>$ \hyperlink{classWav_a69b39a8dd2ddd962b6acb966e0f454ee}{metadata}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A base class for wavs 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classWav_ac89cb1f2f327fab3a32d3ba3cd1261f8}\label{classWav_ac89cb1f2f327fab3a32d3ba3cd1261f8}} 
+\index{Wav@{Wav}!get\+Metadata@{get\+Metadata}}
+\index{get\+Metadata@{get\+Metadata}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{get\+Metadata()}{getMetadata()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{structmetadata__chunk}{metadata\+\_\+chunk} $>$ Wav\+::get\+Metadata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+A getter for the metadata \mbox{\Hypertarget{classWav_a597dc2c221a3cdb5da499b91f6e907a6}\label{classWav_a597dc2c221a3cdb5da499b91f6e907a6}} 
+\index{Wav@{Wav}!set\+Metadata@{set\+Metadata}}
+\index{set\+Metadata@{set\+Metadata}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{set\+Metadata()}{setMetadata()}}
+{\footnotesize\ttfamily void Wav\+::set\+Metadata (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{structmetadata__chunk}{metadata\+\_\+chunk} $>$}]{new\+Metadata }\end{DoxyParamCaption})}
+
+A setter for the metadata 
+\begin{DoxyParams}{Parameters}
+{\em new\+Metadata} & -\/ the new metadata to set the metadata to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWav_a22586ef9396d094658ffc51e0d2108d5}\label{classWav_a22586ef9396d094658ffc51e0d2108d5}} 
+\index{Wav@{Wav}!set\+Metadata\+Header@{set\+Metadata\+Header}}
+\index{set\+Metadata\+Header@{set\+Metadata\+Header}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{set\+Metadata\+Header()}{setMetadataHeader()}}
+{\footnotesize\ttfamily void Wav\+::set\+Metadata\+Header (\begin{DoxyParamCaption}\item[{\hyperlink{structmetadata__header}{metadata\+\_\+header}}]{new\+Header }\end{DoxyParamCaption})}
+
+A setter for the metadata header 
+\begin{DoxyParams}{Parameters}
+{\em new\+Header} & -\/ the new metadata header to set the metadata header to \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classWav_a69b39a8dd2ddd962b6acb966e0f454ee}\label{classWav_a69b39a8dd2ddd962b6acb966e0f454ee}} 
+\index{Wav@{Wav}!metadata@{metadata}}
+\index{metadata@{metadata}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{metadata}{metadata}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structmetadata__chunk}{metadata\+\_\+chunk}$>$ Wav\+::metadata\hspace{0.3cm}{\ttfamily [protected]}}
+
+A vector of metadata subchunks \mbox{\Hypertarget{classWav_a4ddb72dc81101f50ef1f6c4d0e8dc257}\label{classWav_a4ddb72dc81101f50ef1f6c4d0e8dc257}} 
+\index{Wav@{Wav}!metadata\+Header@{metadata\+Header}}
+\index{metadata\+Header@{metadata\+Header}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{metadata\+Header}{metadataHeader}}
+{\footnotesize\ttfamily \hyperlink{structmetadata__header}{metadata\+\_\+header} Wav\+::metadata\+Header\hspace{0.3cm}{\ttfamily [protected]}}
+
+The metadata header info 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Wav_8h}{Wav.\+h}\item 
+\hyperlink{Wav_8cpp}{Wav.\+cpp}\end{DoxyCompactItemize}

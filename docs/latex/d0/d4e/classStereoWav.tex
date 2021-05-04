@@ -1,0 +1,62 @@
+\hypertarget{classStereoWav}{}\section{Stereo\+Wav$<$ T $>$ Class Template Reference}
+\label{classStereoWav}\index{Stereo\+Wav$<$ T $>$@{Stereo\+Wav$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Stereo\+Wav.\+h$>$}
+
+
+
+Inheritance diagram for Stereo\+Wav$<$ T $>$\+:
+% FIG 0
+
+
+Collaboration diagram for Stereo\+Wav$<$ T $>$\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStereoWav_a178f2d76041b8020bb14667fc7c696d1}\label{classStereoWav_a178f2d76041b8020bb14667fc7c696d1}} 
+T $\ast$ {\bfseries get\+Buffer\+One} () const
+\item 
+\mbox{\Hypertarget{classStereoWav_a993bdd3eb575890106810fe541e73476}\label{classStereoWav_a993bdd3eb575890106810fe541e73476}} 
+T $\ast$ {\bfseries get\+Buffer\+Two} () const
+\item 
+\mbox{\Hypertarget{classStereoWav_ae45852ed5c2722ce77b797e9ae30f9b5}\label{classStereoWav_ae45852ed5c2722ce77b797e9ae30f9b5}} 
+{\bfseries Stereo\+Wav} (std\+::string filename, \hyperlink{structwav__header}{wav\+\_\+header} wave\+Header, \hyperlink{structmetadata__header}{metadata\+\_\+header} \hyperlink{classWav_a4ddb72dc81101f50ef1f6c4d0e8dc257}{metadata\+Header}, std\+::vector$<$ \hyperlink{structmetadata__chunk}{metadata\+\_\+chunk} $>$ \hyperlink{classWav_a69b39a8dd2ddd962b6acb966e0f454ee}{metadata}, T $\ast$\hyperlink{classStereoWav_a6d66822cb86640adf89bf62fcbbeb563}{buffer\+One}, T $\ast$\hyperlink{classStereoWav_a8235e3a3cc12840a549f2de9d74de35e}{buffer\+Two})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \hyperlink{classStereoWav_a6d66822cb86640adf89bf62fcbbeb563}{buffer\+One} = nullptr
+\item 
+T $\ast$ \hyperlink{classStereoWav_a8235e3a3cc12840a549f2de9d74de35e}{buffer\+Two} = nullptr
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Stereo\+Wav$<$ T $>$}
+
+A class for storing the data from a stereo wav file 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classStereoWav_a6d66822cb86640adf89bf62fcbbeb563}\label{classStereoWav_a6d66822cb86640adf89bf62fcbbeb563}} 
+\index{Stereo\+Wav@{Stereo\+Wav}!buffer\+One@{buffer\+One}}
+\index{buffer\+One@{buffer\+One}!Stereo\+Wav@{Stereo\+Wav}}
+\subsubsection{\texorpdfstring{buffer\+One}{bufferOne}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ \hyperlink{classStereoWav}{Stereo\+Wav}$<$ T $>$\+::buffer\+One = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+A T array storing one channel of the audio data of the wav \mbox{\Hypertarget{classStereoWav_a8235e3a3cc12840a549f2de9d74de35e}\label{classStereoWav_a8235e3a3cc12840a549f2de9d74de35e}} 
+\index{Stereo\+Wav@{Stereo\+Wav}!buffer\+Two@{buffer\+Two}}
+\index{buffer\+Two@{buffer\+Two}!Stereo\+Wav@{Stereo\+Wav}}
+\subsubsection{\texorpdfstring{buffer\+Two}{bufferTwo}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ \hyperlink{classStereoWav}{Stereo\+Wav}$<$ T $>$\+::buffer\+Two = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+A T array storing the second channel of the audio data of the wav 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{StereoWav_8h}{Stereo\+Wav.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,84 @@
+\hypertarget{classUserInteraction}{}\section{User\+Interaction Class Reference}
+\label{classUserInteraction}\index{User\+Interaction@{User\+Interaction}}
+
+
+{\ttfamily \#include $<$User\+Interaction.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUserInteraction_a7e2132169f69dffcbd9a4f178054c917}{User\+Interaction} ()
+\item 
+\mbox{\Hypertarget{classUserInteraction_a6d47d32db1cfcb16c572c629ea6b8112}\label{classUserInteraction_a6d47d32db1cfcb16c572c629ea6b8112}} 
+{\bfseries User\+Interaction} (std\+::vector$<$ \hyperlink{classWav}{Wav} $\ast$$>$ new\+Wavs, std\+::string new\+Folder)
+\item 
+void \hyperlink{classUserInteraction_af0f20f9766feea9312be9e1009e693b8}{user\+Selection} ()
+\item 
+void \hyperlink{classUserInteraction_ad019168c00904e9f57df69940e4873c0}{user\+Modify} ()
+\item 
+void \hyperlink{classUserInteraction_a3b1ea7fb9056d2fcada684ff115220f3}{processor\+Type} ()
+\item 
+std\+::string \hyperlink{classUserInteraction_aae3cb625928ae673c47f917650dcb335}{save\+File\+Name} (std\+::string filename)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUserInteraction_afd9f4669b4ca5f5b8071e61aeced2e92}\label{classUserInteraction_afd9f4669b4ca5f5b8071e61aeced2e92}} 
+int {\bfseries selection}
+\item 
+\mbox{\Hypertarget{classUserInteraction_a65578d23f4317b3ac7b08155b3b4fe9a}\label{classUserInteraction_a65578d23f4317b3ac7b08155b3b4fe9a}} 
+std\+::vector$<$ \hyperlink{classWav}{Wav} $\ast$ $>$ {\bfseries wavs}
+\item 
+\mbox{\Hypertarget{classUserInteraction_a27613d3d241b657945c5c2880b17b18d}\label{classUserInteraction_a27613d3d241b657945c5c2880b17b18d}} 
+std\+::string {\bfseries folder}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class for interacting with the user 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUserInteraction_a7e2132169f69dffcbd9a4f178054c917}\label{classUserInteraction_a7e2132169f69dffcbd9a4f178054c917}} 
+\index{User\+Interaction@{User\+Interaction}!User\+Interaction@{User\+Interaction}}
+\index{User\+Interaction@{User\+Interaction}!User\+Interaction@{User\+Interaction}}
+\subsubsection{\texorpdfstring{User\+Interaction()}{UserInteraction()}}
+{\footnotesize\ttfamily User\+Interaction\+::\+User\+Interaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Ctor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classUserInteraction_a3b1ea7fb9056d2fcada684ff115220f3}\label{classUserInteraction_a3b1ea7fb9056d2fcada684ff115220f3}} 
+\index{User\+Interaction@{User\+Interaction}!processor\+Type@{processor\+Type}}
+\index{processor\+Type@{processor\+Type}!User\+Interaction@{User\+Interaction}}
+\subsubsection{\texorpdfstring{processor\+Type()}{processorType()}}
+{\footnotesize\ttfamily void User\+Interaction\+::processor\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A method that asks the user if they wish to process a file. Asks for file and calls methods from one or more of \hyperlink{classEcho}{Echo}, \hyperlink{classNormal}{Normal}, \hyperlink{classNoiseGate}{Noise\+Gate} to process the file \mbox{\Hypertarget{classUserInteraction_aae3cb625928ae673c47f917650dcb335}\label{classUserInteraction_aae3cb625928ae673c47f917650dcb335}} 
+\index{User\+Interaction@{User\+Interaction}!save\+File\+Name@{save\+File\+Name}}
+\index{save\+File\+Name@{save\+File\+Name}!User\+Interaction@{User\+Interaction}}
+\subsubsection{\texorpdfstring{save\+File\+Name()}{saveFileName()}}
+{\footnotesize\ttfamily std\+::string User\+Interaction\+::save\+File\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+A method that asks user to give a filename for the new file to be saved under. This comes after processing the audio data. 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUserInteraction_ad019168c00904e9f57df69940e4873c0}\label{classUserInteraction_ad019168c00904e9f57df69940e4873c0}} 
+\index{User\+Interaction@{User\+Interaction}!user\+Modify@{user\+Modify}}
+\index{user\+Modify@{user\+Modify}!User\+Interaction@{User\+Interaction}}
+\subsubsection{\texorpdfstring{user\+Modify()}{userModify()}}
+{\footnotesize\ttfamily void User\+Interaction\+::user\+Modify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A method that asks the user if they wish to modify metadata, then asks for file and calls a method from modify\+Metadata to modify given file \mbox{\Hypertarget{classUserInteraction_af0f20f9766feea9312be9e1009e693b8}\label{classUserInteraction_af0f20f9766feea9312be9e1009e693b8}} 
+\index{User\+Interaction@{User\+Interaction}!user\+Selection@{user\+Selection}}
+\index{user\+Selection@{user\+Selection}!User\+Interaction@{User\+Interaction}}
+\subsubsection{\texorpdfstring{user\+Selection()}{userSelection()}}
+{\footnotesize\ttfamily void User\+Interaction\+::user\+Selection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A method that allows the user to choose what they want to do with their audio files 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{UserInteraction_8h}{User\+Interaction.\+h}\item 
+\hyperlink{UserInteraction_8cpp}{User\+Interaction.\+cpp}\end{DoxyCompactItemize}

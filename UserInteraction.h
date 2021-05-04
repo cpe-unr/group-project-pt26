@@ -3,15 +3,17 @@
 #ifndef USERINTERACTION_H
 #define USERINTERACTION_H
 
+#include "Wav.h"
 #include <iostream>
 #include <string>
+#include <vector>
 /**
  * A class for interacting with the user
- *
  */
 class UserInteraction{
-	std::string filename;
 	int selection;
+	std::vector<Wav*> wavs;
+	std::string folder;
 
 public:
 	/**
@@ -20,6 +22,7 @@ public:
 	 */
 	UserInteraction();
 
+	UserInteraction(std::vector<Wav*> newWavs, std::string newFolder);
 	/**
 	 * A method that allows the user to choose what they want to do with their audio files
 	 */

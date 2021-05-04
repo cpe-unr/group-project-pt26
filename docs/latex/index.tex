@@ -1,0 +1,39 @@
+\subsubsection*{Group Members and Responsibilities}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ $\ast$$\ast$\+Kayleigh Dohm$\ast$$\ast$}&\textbf{ $\ast$$\ast$\+Drake Lemon$\ast$$\ast$}&\textbf{ $\ast$$\ast$\+Nicole Siron$\ast$$\ast$  }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ $\ast$$\ast$\+Kayleigh Dohm$\ast$$\ast$}&\textbf{ $\ast$$\ast$\+Drake Lemon$\ast$$\ast$}&\textbf{ $\ast$$\ast$\+Nicole Siron$\ast$$\ast$  }\\\cline{1-3}
+\endhead
+User Interaction &Modify Metadata&File Input \\\cline{1-3}
+File Output &All Processors &\\\cline{1-3}
+Makefile &&\\\cline{1-3}
+\end{longtabu}
+\subsubsection*{Description of Design}
+
+
+\begin{DoxyItemize}
+\item We created multiple classes to handle separate functions and operations.
+\item File Input and File Output are their own separate classes that do not need access to each other
+\item We created a user interaction class that gives the user the option to choose what they want to do (process, metadata, C\+SV)
+\item There are two different classes, \hyperlink{classMonoWav}{Mono\+Wav} and \hyperlink{classStereoWav}{Stereo\+Wav}, that handle those respective audio files and each will have a template that allows for either 8 bits or 16 bits so that multiple methods aren\textquotesingle{}t needed for each.
+\item An interface, \hyperlink{classIprocessable}{Iprocessable}, will provide the methods needed for \hyperlink{classEcho}{Echo}, Normalization, and \hyperlink{classNoiseGate}{Noise\+Gate}. Each will override the pure virtual function for their own use.
+\end{DoxyItemize}
+
+\paragraph*{U\+ML Diagrams}
+
+ 
+
+\subsubsection*{Challenges Encountered}
+
+
+\begin{DoxyItemize}
+\item Communication was difficult just because the class isn\textquotesingle{}t really in person like previous semesters
+\item Splitting up things to do/ knowing what classes need access to each other
+\item Bringing all the files back together after they\textquotesingle{}ve all been coded 
+\end{DoxyItemize}

@@ -1,0 +1,68 @@
+\hypertarget{classIprocessable}{}\section{Iprocessable Class Reference}
+\label{classIprocessable}\index{Iprocessable@{Iprocessable}}
+
+
+{\ttfamily \#include $<$Iprocessable.\+h$>$}
+
+
+
+Inheritance diagram for Iprocessable\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual unsigned char $\ast$ \hyperlink{classIprocessable_a6f0ff631112fba8eb55d9760b41987ea}{process\+Buffer} (unsigned char $\ast$buffer, int size)=0
+\item 
+virtual short $\ast$ \hyperlink{classIprocessable_a3a379ff1aab98b507892319afbd7eef0}{process\+Buffer} (short $\ast$buffer, int size)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface which provides functions needed to process wav files 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classIprocessable_a6f0ff631112fba8eb55d9760b41987ea}\label{classIprocessable_a6f0ff631112fba8eb55d9760b41987ea}} 
+\index{Iprocessable@{Iprocessable}!process\+Buffer@{process\+Buffer}}
+\index{process\+Buffer@{process\+Buffer}!Iprocessable@{Iprocessable}}
+\subsubsection{\texorpdfstring{process\+Buffer()}{processBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual unsigned char$\ast$ Iprocessable\+::process\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Method that can be inherited to \hyperlink{classEcho}{Echo}, Normalization, and \hyperlink{classNoiseGate}{Noise\+Gate}. Allows each class to process the given \hyperlink{classWav}{Wav} File. Overload for 8 bit files. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ an array of unsigned chars constituting the audio data \\
+\hline
+{\em size} & -\/ an integer size of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ a processed array of unsigned chars 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classEcho_ad4e1835e48ebf660a529c68beb28e9d0}{Echo}, \hyperlink{classNoiseGate_a820117e917acd9cdc55e5f4ee46b9231}{Noise\+Gate}, and \hyperlink{classNormal_a3cb50295766e591b7a108cd6e0fc71ba}{Normal}.
+
+\mbox{\Hypertarget{classIprocessable_a3a379ff1aab98b507892319afbd7eef0}\label{classIprocessable_a3a379ff1aab98b507892319afbd7eef0}} 
+\index{Iprocessable@{Iprocessable}!process\+Buffer@{process\+Buffer}}
+\index{process\+Buffer@{process\+Buffer}!Iprocessable@{Iprocessable}}
+\subsubsection{\texorpdfstring{process\+Buffer()}{processBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual short$\ast$ Iprocessable\+::process\+Buffer (\begin{DoxyParamCaption}\item[{short $\ast$}]{buffer,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Method that can be inherited to \hyperlink{classEcho}{Echo}, Normalization, and \hyperlink{classNoiseGate}{Noise\+Gate}. Allows each class to process the given \hyperlink{classWav}{Wav} File. Overload for 16 bit files. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ an array of shorts constituting the audio data \\
+\hline
+{\em size} & -\/ an integer size of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ a processed array of shorts 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classEcho_aea3e5f4352454ad3182695044ebefacf}{Echo}, \hyperlink{classNoiseGate_a05c33d8853ee2764af12cce10ae0e59d}{Noise\+Gate}, and \hyperlink{classNormal_a243a816f6a995ca5145a160b3b3d8b8f}{Normal}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Iprocessable_8h}{Iprocessable.\+h}\end{DoxyCompactItemize}

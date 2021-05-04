@@ -3,8 +3,7 @@
 #include "MetadataChunk.h"
 #include "MetadataHeader.h"
 
-template <typename T>
-void ModifyMetadata::modifyMetadata(Wav<T>* wav, std::vector <std::string> metadataIDs, std::vector <std::string> metadata) {
+void ModifyMetadata::modifyMetadata(Wav* wav, std::vector <std::string> metadataIDs, std::vector <std::string> metadata) {
 	metadata_header newMetadataHeader;
 	std::vector<metadata_chunk> newMetadata;
 	int newSize = 0;
@@ -49,6 +48,4 @@ void ModifyMetadata::modifyMetadata(Wav<T>* wav, std::vector <std::string> metad
 	newMetadataHeader.size = newSize;
 	wav->setMetadataHeader(newMetadataHeader);
 	wav->setMetadata(newMetadata);
-	//write new metadata to file
-	/*FileOutput::createNewMetadataFile(newMetadata);*/
 }
