@@ -6,6 +6,7 @@ UserInteraction Implementation
 
 #include "UserInteraction.h"
 #include "FileOutput.h"
+#include "ModifyMetadata.h"
 
 UserInteraction::UserInteraction(){
 	selection = 0
@@ -54,7 +55,7 @@ void UserInteraction::processorType(){
 	std::cout << "Please provide the name of the file you wish to process." <<std::endl;
 	std::cin >> filename;
 	std::string newFilename = saveFileName(filename);
-	FileOutput::newFile(filename);
+	FileOutput::newFile(newFilename);
 	
 }
 
