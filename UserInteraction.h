@@ -38,17 +38,12 @@ public:
 	 */
 	void processorType();
 
-	/**
-	 * A method that asks the user to create a CSV file from all their given files. If user picks yes, call method from fileOutput to create CSV
-	 *
-	 */
-	void makeCSV();
 
 	/**
 	 * A method that asks user to give a filename for the new file to be saved under. This comes after processing the audio data.
 	 * @param: takes in the current filename and changes it to the new one
 	 */
-	void saveFileName(std::string filename);
+	std::string saveFileName(std::string filename);
 	
 };
 

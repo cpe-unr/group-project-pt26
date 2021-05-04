@@ -34,7 +34,7 @@ void UserInteraction::userSelection(){
 		break;
 
 	case 3:
-		UserInteraction::makeCSV;
+		FileOutput::exportCSV;
 		break;
 
 	}
@@ -53,10 +53,23 @@ void UserInteraction::processorType(){
 	
 	std::cout << "Please provide the name of the file you wish to process." <<std::endl;
 	std::cin >> filename;
+	std::string newFilename = saveFileName(filename);
 	FileOutput::newFile(filename);
 	
 }
 
-void UserInteraction::makeCSV(){
-
+std::string UserInteraction::saveFileName(std::string filename){
+	std::string file;
+	do{
+		std::cout << "Please provide the new name of this file." << std::endl
+		std::cin >> file;
+		if (file != filename){
+			return file;
+		}
+		else{
+		cout << "Invalid. New file name must be different from that of the current file." << std::endl;
+		}	
+	}	
+	while (file = filename);
 }
+
